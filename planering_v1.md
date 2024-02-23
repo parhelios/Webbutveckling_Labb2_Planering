@@ -57,6 +57,7 @@
 | Category      | ProductCategory[] | Categories of product              |
 | Status        | bool              | Status of product in database      |
 | ImageURL      | string [attr]     | Image source for product           |
+| Amount        | int               | Amount of product in database      |
 
 ### ProductCategory
 

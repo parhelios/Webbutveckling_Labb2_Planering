@@ -51,10 +51,11 @@
 
 ### User
 
-| Property Name | Data Type         | Description     |
-| ------------- | ----------------- | --------------- |
-| Id            | int/Guid/ObjectId | Id for database |
-| Email         | string [attr]     | Email of user   |
+| Property Name | Data Type         | Description      |
+| ------------- | ----------------- | ---------------- |
+| Id            | int/Guid/ObjectId | Id for database  |
+| Email         | string [attr]     | Email of user    |
+| Password      | string?           | Password of user |
 
 ### Customer : User
 

@@ -27,6 +27,14 @@
 | "/users/{id}"      | PUT    | int Id, User | NONE       | 200, 404      |
 | "/users/{id}"      | DELETE | int Id       | NONE       | 200, 404      |
 
+### ProductCategory Endpoints
+
+| Path             | Method | Request         | Response          | ResponseCodes |
+| ---------------- | ------ | --------------- | ----------------- | ------------- |
+| "/category"      | GET    | NONE            | ProductCategory[] | 200           |
+| "/category"      | PUT    | ProductCategory | NONE              | 200, 400      |
+| "/category/{id}" | DELETE | int Id          | NONE              | 200, 404      |
+
 ## Data
 
 ### Product

@@ -24,7 +24,7 @@
 | "/users/{email}"   | GET    | string Email | User       | 200, 404      |
 | "/users/customers" | POST   | User         | NONE       | 200, 400      |
 | "/users/admins"    | POST   | User         | NONE       | 200, 400      |
-| "/users/{id}"      | PUT    | int Id       | NONE       | 200, 404      |
+| "/users/{id}"      | PUT    | int Id, User | NONE       | 200, 404      |
 | "/users/{id}"      | DELETE | int Id       | NONE       | 200, 404      |
 
 ## Data

@@ -24,8 +24,7 @@
 | "/users/{email}"   | GET    | string Email | Customer   | 200, 404      | Get user by email |
 | "/users/customers" | POST   | User         | NONE       | 200, 400      | Add new customer  |
 | "/users/admins"    | POST   | User         | NONE       | 200, 400      | Add new admin     |
-
-| "/users/{userId}" | DELETE | int userId | NONE | 200, 404 | Delete customer |
+| "/users/{userId}"  | DELETE | int userId   | NONE       | 200, 404      | Delete customer   |
 
 ### ProductCategory Endpoints
 
@@ -37,12 +36,14 @@
 
 ### CustomerInteraction Endpoints
 
-| Path                          | Method | Request                 | Response | ResponseCodes | Description               |
-| ----------------------------- | ------ | ----------------------- | -------- | ------------- | ------------------------- |
-| "/customer/{userId}"          | PUT    | int userId, Product     | NONE     | 200, 404      | Add to customer cart      |
-| "/customer/{userId}"          | PATCH  | int userId, ContactInfo | NONE     | 200, 404      | Update customer info      |
-| "/customer/password/{userId}" | PATCH  | int userId, Customer    | NONE     | 200, 404      | Update customer password  |
-| "/customer/{userId}"          | DELETE | int userId, Product     | NONE     | 200, 404      | Remove from customer cart |
+| Path                          | Method | Request                 | Response | ResponseCodes | Description                           |
+| ----------------------------- | ------ | ----------------------- | -------- | ------------- | ------------------------------------- |
+| "/customer/{userId}"          | POST   | int userId, Customer    | NONE     | 200, 404      | Create a customer order               |
+| "/customer/{userId}"          | PATCH  | int userId, ContactInfo | NONE     | 200, 404      | Update customer info                  |
+| "/customer/password/{userId}" | PATCH  | int userId, Customer    | NONE     | 200, 404      | Update customer password              |
+| "/customer/cart/{userId}"     | PATCH  | int userId, Customer    | NONE     | 200, 404      | Clear all products from customer cart |
+| "/customer/cart/{userId}"     | PUT    | int userId, Product     | NONE     | 200, 404      | Add product to customer cart          |
+| "/customer/cart/{userId}"     | DELETE | int userId, Product     | NONE     | 200, 404      | Remove product from customer cart     |
 
 ## Data
 

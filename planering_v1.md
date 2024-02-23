@@ -14,7 +14,7 @@
 | "/products/{id}"       | PATCH  | int Id, Product | NONE      | 200, 400      | Update product               |
 | "/products/{id}        | DELETE | int Id          | NONE      | 200, 404      | Delete product               |
 
-### User Endpoints
+### User Administration Endpoints
 
 | Path               | Method | Request      | Response   | ResponseCodes | Description       |
 | ------------------ | ------ | ------------ | ---------- | ------------- | ----------------- |
@@ -34,11 +34,12 @@
 | "/category"      | POST   | ProductCategory | NONE              | 200, 400      | Add new category   |
 | "/category/{id}" | DELETE | int Id          | NONE              | 200, 404      | Delete category    |
 
-### CustomerInteraction Endpoints
+### Customer Interaction Endpoints
 
 | Path                          | Method | Request                 | Response | ResponseCodes | Description                           |
 | ----------------------------- | ------ | ----------------------- | -------- | ------------- | ------------------------------------- |
-| "/customer/{userId}"          | POST   | int userId, Customer    | NONE     | 200, 404      | Create a customer order               |
+| "/customer/{userId}"          | GET    | int userId              | Customer | 200, 400      | Get all items from customer cart      |
+| "/customer/{userId}"          | POST   | int userId, Customer    | Order    | 200, 400      | Create a customer order               |
 | "/customer/{userId}"          | PATCH  | int userId, ContactInfo | NONE     | 200, 404      | Update customer info                  |
 | "/customer/password/{userId}" | PATCH  | int userId, Customer    | NONE     | 200, 404      | Update customer password              |
 | "/customer/cart/{userId}"     | PATCH  | int userId, Customer    | NONE     | 200, 404      | Clear all products from customer cart |

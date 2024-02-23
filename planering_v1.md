@@ -32,31 +32,32 @@
 
 ### User
 
-| Property Name | Data Type         | Description                    |
-| ------------- | ----------------- | ------------------------------ |
-| Id            | int/Guid/ObjectId | Id for database                |
-| FirstName     | string            | First name of user in database |
-| LastName      | string            | Last name of user in database  |
-| UserInfo      | UserInfo          | Address of user                |
+| Property Name | Data Type         | Description     |
+| ------------- | ----------------- | --------------- |
+| Id            | int/Guid/ObjectId | Id for database |
+| Email         | string [attr]     | Email of user   |
 
-### UserInfo
+### Customer : User
+
+| Property Name | Data Type   | Description                    |
+| ------------- | ----------- | ------------------------------ |
+| FirstName     | string      | First name of user in database |
+| LastName      | string      | Last name of user in database  |
+| ContactInfo   | ContactInfo | Address of user                |
+
+### ContactInfo
 
 | Property Name | Data Type         | Description                  |
 | ------------- | ----------------- | ---------------------------- |
 | Id            | int/Guid/ObjectId | Id for database              |
-| Email         | string [attr]     | Email of user                |
 | Phone         | string [attr]     | Phone number of user         |
 | StreetAddress | string [attr]     | Street address of user       |
-| ZipCode       | int/string [attr] | Zip code of user             |
+| ZipCode       | string [attr]     | Zip code of user             |
 | City          | string            | City of residence of user    |
 | Country       | string            | Country of residence of user |
 
-### Customer
+### Admin : User
 
-| Property Name | Data Type | Description |
-| ------------- | --------- | ----------- |
-
-### Admin
-
-| Property Name | Data Type | Description |
-| ------------- | --------- | ----------- |
+| Property Name | Data Type | Description        |
+| ------------- | --------- | ------------------ |
+| UserName      | string    | Username for admin |

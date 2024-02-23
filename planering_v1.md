@@ -2,11 +2,27 @@
 
 ## Endpoints
 
-### huh?
+### Product
 
-| Path    | Method | Request | Response | ResponseCodes |
-| ------- | ------ | ------- | -------- | ------------- |
-| "/pets" | GET    | NONE    | Pet[]    | 200           |
+| Path                   | Method | Request         | Response  | ResponseCodes |
+| ---------------------- | ------ | --------------- | --------- | ------------- |
+| "/products"            | GET    | NONE            | Product[] | 200           |
+| "/products/{id}"       | GET    | int Id          | Product   | 200, 404      |
+| "/products/{category}" | GET    | string Category | Product[] | 200, 404      |
+| "/products"            | PUT    | Product         | NONE      | 200, 400      |
+| "/products/{id}"       | PUT    | int Id, Product | NONE      | 200, 400      |
+| "/products/{id}        | DELETE | int Id          | NONE      | 200, 404      |
+
+### User
+
+| Path                  | Method | Request | Response   | ResponseCodes |
+| --------------------- | ------ | ------- | ---------- | ------------- |
+| "/users/customers"    | GET    | NONE    | Customer[] | 200           |
+| "/users/admins"       | GET    | NONE    | Admin[]    | 200           |
+| "/products/customers" | PUT    | User    | NONE       | 200, 400      |
+| "/products/admins"    | PUT    | User    | NONE       | 200, 400      |
+| "/users/{id}"         | GET    | int Id  | User       | 200, 404      |
+| "/users/{id}"         | DELETE | int Id  | NONE       | 200, 404      |
 
 ## Data
 
@@ -39,12 +55,13 @@
 
 ### Customer : User
 
-| Property Name | Data Type   | Description                    |
-| ------------- | ----------- | ------------------------------ |
-| FirstName     | string      | First name of user in database |
-| LastName      | string      | Last name of user in database  |
-| ContactInfo   | ContactInfo | Address of user                |
-| Orders        | Order[]     | List of orders made by user    |
+| Property Name | Data Type   | Description                      |
+| ------------- | ----------- | -------------------------------- |
+| FirstName     | string      | First name of user in database   |
+| LastName      | string      | Last name of user in database    |
+| ContactInfo   | ContactInfo | Address of user                  |
+| Orders        | Order[]     | List of orders made by user      |
+| Cart          | Product[]   | List of proucts in customer cart |
 
 ### Admin : User
 
@@ -60,13 +77,6 @@
 | ProductsInOrder | Product[]         | Products in order             |
 | DateTime        | DateTime          | Date and time of making order |
 | Status          | string            | Status of order               |
-
-### CustomerCart
-
-| Property Name  | Data Type         | Description           |
-| -------------- | ----------------- | --------------------- |
-| Id             | int/Guid/ObjectId | Id for database       |
-| ProductsInCart | Product[]         | Products in user cart |
 
 ### ContactInfo
 

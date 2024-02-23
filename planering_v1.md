@@ -59,13 +59,13 @@
 
 ### Customer : User
 
-| Property Name | Data Type   | Description                      |
-| ------------- | ----------- | -------------------------------- |
-| FirstName     | string      | First name of user in database   |
-| LastName      | string      | Last name of user in database    |
-| ContactInfo   | ContactInfo | Address of user                  |
-| Orders        | Order[]     | List of orders made by user      |
-| Cart          | Product[]   | List of proucts in customer cart |
+| Property Name | Data Type   | Description                       |
+| ------------- | ----------- | --------------------------------- |
+| FirstName     | string      | First name of user in database    |
+| LastName      | string      | Last name of user in database     |
+| ContactInfo   | ContactInfo | Address of user                   |
+| Orders        | Order[]     | List of orders made by user       |
+| Cart          | Product[]   | List of products in customer cart |
 
 ### Admin : User
 
@@ -86,9 +86,10 @@
 
 ### Orders
 
-| Property Name   | Data Type         | Description                   |
-| --------------- | ----------------- | ----------------------------- |
-| Id              | int/Guid/ObjectId | Id for database               |
-| ProductsInOrder | Product[]         | Products in order             |
-| DateTime        | DateTime          | Date and time of making order |
-| Status          | string            | Status of order               |
+| Property Name   | Data Type         | Description                     |
+| --------------- | ----------------- | ------------------------------- |
+| Id              | int/Guid/ObjectId | Id for database                 |
+| CustomerId      | int/Guid/ObjectId | Id for customer that made order |
+| ProductsInOrder | Product[]         | Products in order               |
+| DateTime        | DateTime          | Date and time of making order   |
+| Status          | string            | Status of order                 |

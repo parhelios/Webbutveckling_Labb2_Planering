@@ -73,15 +73,6 @@
 | ------------- | --------- | ------------------ |
 | UserName      | string    | Username for admin |
 
-### Orders
-
-| Property Name   | Data Type         | Description                   |
-| --------------- | ----------------- | ----------------------------- |
-| Id              | int/Guid/ObjectId | Id for database               |
-| ProductsInOrder | Product[]         | Products in order             |
-| DateTime        | DateTime          | Date and time of making order |
-| Status          | string            | Status of order               |
-
 ### ContactInfo
 
 | Property Name | Data Type         | Description                  |
@@ -92,3 +83,12 @@
 | ZipCode       | string [attr]     | Zip code of user             |
 | City          | string            | City of residence of user    |
 | Country       | string            | Country of residence of user |
+
+### Orders
+
+| Property Name   | Data Type         | Description                   |
+| --------------- | ----------------- | ----------------------------- |
+| Id              | int/Guid/ObjectId | Id for database               |
+| ProductsInOrder | Product[]         | Products in order             |
+| DateTime        | DateTime          | Date and time of making order |
+| Status          | string            | Status of order               |

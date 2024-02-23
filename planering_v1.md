@@ -4,36 +4,45 @@
 
 ### Product Endpoints
 
-| Path                   | Method | Request         | Response  | ResponseCodes |
-| ---------------------- | ------ | --------------- | --------- | ------------- |
-| "/products"            | GET    | NONE            | Product[] | 200           |
-| "/products/{id}"       | GET    | int Id          | Product   | 200, 404      |
-| "/products/{name}"     | GET    | string Name     | Product   | 200, 404      |
-| "/products/{category}" | GET    | string Category | Product[] | 200, 404      |
-| "/products"            | POST   | Product         | NONE      | 200, 400      |
-| "/products/{id}"       | PUT    | int Id, Product | NONE      | 200, 400      |
-| "/products/{id}        | DELETE | int Id          | NONE      | 200, 404      |
+| Path                   | Method | Request         | Response  | ResponseCodes | Description                  |
+| ---------------------- | ------ | --------------- | --------- | ------------- | ---------------------------- |
+| "/products"            | GET    | NONE            | Product[] | 200           | Get all products             |
+| "/products/{id}"       | GET    | int Id          | Product   | 200, 404      | Get product by id            |
+| "/products/{name}"     | GET    | string Name     | Product   | 200, 404      | Get product by name          |
+| "/products/{category}" | GET    | string Category | Product[] | 200, 404      | Get all products in category |
+| "/products"            | POST   | Product         | NONE      | 200, 400      | Add new product              |
+| "/products/{id}"       | PATCH  | int Id, Product | NONE      | 200, 400      | Update product               |
+| "/products/{id}        | DELETE | int Id          | NONE      | 200, 404      | Delete product               |
 
 ### User Endpoints
 
-| Path               | Method | Request      | Response   | ResponseCodes |
-| ------------------ | ------ | ------------ | ---------- | ------------- |
-| "/users/customers" | GET    | NONE         | Customer[] | 200           |
-| "/users/admins"    | GET    | NONE         | Admin[]    | 200           |
-| "/users/{id}"      | GET    | int Id       | User       | 200, 404      |
-| "/users/{email}"   | GET    | string Email | User       | 200, 404      |
-| "/users/customers" | POST   | User         | NONE       | 200, 400      |
-| "/users/admins"    | POST   | User         | NONE       | 200, 400      |
-| "/users/{id}"      | PUT    | int Id, User | NONE       | 200, 404      |
-| "/users/{id}"      | DELETE | int Id       | NONE       | 200, 404      |
+| Path               | Method | Request      | Response   | ResponseCodes | Description       |
+| ------------------ | ------ | ------------ | ---------- | ------------- | ----------------- |
+| "/users/customers" | GET    | NONE         | Customer[] | 200           | Get all customers |
+| "/users/admins"    | GET    | NONE         | Admin[]    | 200           | Get all admins    |
+| "/users/{userId}"  | GET    | int userId   | Customer   | 200, 404      | Get user by id    |
+| "/users/{email}"   | GET    | string Email | Customer   | 200, 404      | Get user by email |
+| "/users/customers" | POST   | User         | NONE       | 200, 400      | Add new customer  |
+| "/users/admins"    | POST   | User         | NONE       | 200, 400      | Add new admin     |
+
+| "/users/{userId}" | DELETE | int userId | NONE | 200, 404 | Delete customer |
 
 ### ProductCategory Endpoints
 
-| Path             | Method | Request         | Response          | ResponseCodes |
-| ---------------- | ------ | --------------- | ----------------- | ------------- |
-| "/category"      | GET    | NONE            | ProductCategory[] | 200           |
-| "/category"      | PUT    | ProductCategory | NONE              | 200, 400      |
-| "/category/{id}" | DELETE | int Id          | NONE              | 200, 404      |
+| Path             | Method | Request         | Response          | ResponseCodes | Description        |
+| ---------------- | ------ | --------------- | ----------------- | ------------- | ------------------ |
+| "/category"      | GET    | NONE            | ProductCategory[] | 200           | Get all categories |
+| "/category"      | POST   | ProductCategory | NONE              | 200, 400      | Add new category   |
+| "/category/{id}" | DELETE | int Id          | NONE              | 200, 404      | Delete category    |
+
+### CustomerInteraction Endpoints
+
+| Path                          | Method | Request                 | Response | ResponseCodes | Description               |
+| ----------------------------- | ------ | ----------------------- | -------- | ------------- | ------------------------- |
+| "/customer/{userId}"          | PUT    | int userId, Product     | NONE     | 200, 404      | Add to customer cart      |
+| "/customer/{userId}"          | PATCH  | int userId, ContactInfo | NONE     | 200, 404      | Update customer info      |
+| "/customer/password/{userId}" | PATCH  | int userId, Customer    | NONE     | 200, 404      | Update customer password  |
+| "/customer/{userId}"          | DELETE | int userId, Product     | NONE     | 200, 404      | Remove from customer cart |
 
 ## Data
 

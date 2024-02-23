@@ -2,27 +2,30 @@
 
 ## Endpoints
 
-### Product
+### Product Endpoints
 
 | Path                   | Method | Request         | Response  | ResponseCodes |
 | ---------------------- | ------ | --------------- | --------- | ------------- |
 | "/products"            | GET    | NONE            | Product[] | 200           |
 | "/products/{id}"       | GET    | int Id          | Product   | 200, 404      |
+| "/products/{name}"     | GET    | string Name     | Product   | 200, 404      |
 | "/products/{category}" | GET    | string Category | Product[] | 200, 404      |
-| "/products"            | PUT    | Product         | NONE      | 200, 400      |
+| "/products"            | POST   | Product         | NONE      | 200, 400      |
 | "/products/{id}"       | PUT    | int Id, Product | NONE      | 200, 400      |
 | "/products/{id}        | DELETE | int Id          | NONE      | 200, 404      |
 
-### User
+### User Endpoints
 
-| Path                  | Method | Request | Response   | ResponseCodes |
-| --------------------- | ------ | ------- | ---------- | ------------- |
-| "/users/customers"    | GET    | NONE    | Customer[] | 200           |
-| "/users/admins"       | GET    | NONE    | Admin[]    | 200           |
-| "/products/customers" | PUT    | User    | NONE       | 200, 400      |
-| "/products/admins"    | PUT    | User    | NONE       | 200, 400      |
-| "/users/{id}"         | GET    | int Id  | User       | 200, 404      |
-| "/users/{id}"         | DELETE | int Id  | NONE       | 200, 404      |
+| Path               | Method | Request      | Response   | ResponseCodes |
+| ------------------ | ------ | ------------ | ---------- | ------------- |
+| "/users/customers" | GET    | NONE         | Customer[] | 200           |
+| "/users/admins"    | GET    | NONE         | Admin[]    | 200           |
+| "/users/{id}"      | GET    | int Id       | User       | 200, 404      |
+| "/users/{email}"   | GET    | string Email | User       | 200, 404      |
+| "/users/customers" | POST   | User         | NONE       | 200, 400      |
+| "/users/admins"    | POST   | User         | NONE       | 200, 400      |
+| "/users/{id}"      | PUT    | int Id       | NONE       | 200, 404      |
+| "/users/{id}"      | DELETE | int Id       | NONE       | 200, 404      |
 
 ## Data
 

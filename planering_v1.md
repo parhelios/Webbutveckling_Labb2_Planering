@@ -8,8 +8,8 @@
 | ---------------------- | ------ | --------------- | --------- | ------------- | ---------------------------- |
 | "/products"            | GET    | NONE            | Product[] | 200, 404           | Get all products             |
 | "/products/{id}"       | GET    | int Id          | Product   | 200, 404      | Get product by id            |
-| "/products/{name}"     | GET    | string Name     | Product   | 200, 404      | Get product by name          |
-| "/products/{category}" | GET    | string Category | Product[] | 200, 404      | Get all products in category |
+| "/products/name/{name}"     | GET    | string Name     | Product   | 200, 404      | Get product by name          |
+| "/products/category/{category}" | GET    | string Category | Product[] | 200, 404      | Get all products in category |
 | "/products"            | POST   | Product         | NONE      | 200, 400      | Add new product              |
 | "/products/{id}"       | PATCH  | int Id, Product | NONE      | 200, 400      | Update product               |
 | "/products/{id}        | DELETE | int Id          | NONE      | 200, 404      | Delete product               |

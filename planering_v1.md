@@ -39,7 +39,7 @@
 | Path                          | Method | Request                 | Response | ResponseCodes | Description                           |
 | ----------------------------- | ------ | ----------------------- | -------- | ------------- | ------------------------------------- |
 | "/customer/{userId}"          | GET    | int userId              | Product[] | 200, 400      | Get all items from customer cart      |
-| "/customer/{userId}"          | POST   | int userId, Customer    | Order    | 200, 400      | Create a customer order               |
+| "/customer/{userId}"          | POST   | int userId    | Order    | 200, 400      | Create a customer order               |
 | "/customer/{userId}"          | PATCH  | int userId, ContactInfo | NONE     | 200, 404      | Update customer info                  |
 | "/customer/password/{userId}" | PATCH  | int userId, Customer    | NONE     | 200, 404      | Update customer password              |
 | "/customer/cart/{userId}"     | PATCH  | int userId, Customer    | NONE     | 200, 404      | Clear all products from customer cart |

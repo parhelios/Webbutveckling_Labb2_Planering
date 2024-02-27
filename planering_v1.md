@@ -112,5 +112,5 @@
 | Id              | int | Id for database                 |
 | CustomerId      | int | Id for customer that made order |
 | ProductsInOrder | Product[]         | Products in order               |
-| DateTime        | DateTime          | Date and time of making order   |
+| OrderDate        | DateTime          | Date and time of making order   |
 | Status          | string            | Status of order                 |

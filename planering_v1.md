@@ -102,6 +102,7 @@
 | Address | string [attr]     | Street address of user       |
 | ZipCode       | string [attr]     | Zip code of user             |
 | City          | string            | City of residence of user    |
+| Region        | string            | Region of residence of user    |
 | Country       | string            | Country of residence of user |
 
 ### Order

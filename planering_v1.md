@@ -44,7 +44,7 @@
 | "/customer/password/{userId}" | PATCH  | int userId, Customer    | NONE     | 200, 404      | Update customer password              |
 | "/customer/cart/{userId}"     | PATCH  | int userId, Customer    | NONE     | 200, 404      | Clear all products from customer cart |
 | "/customer/cart/{userId}"     | PUT    | int userId, Product     | NONE     | 200, 404      | Add product to customer cart          |
-| "/customer/cart/{userId}"     | DELETE | int userId, Product     | NONE     | 200, 404      | Remove product from customer cart     |
+| "/customer/cart/{userId}/{productId}"     | DELETE | int userId, Product     | NONE     | 200, 404      | Remove product from customer cart     |
 
 ## Data
 

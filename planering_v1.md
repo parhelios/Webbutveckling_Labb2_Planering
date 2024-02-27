@@ -6,7 +6,7 @@
 
 | Path                   | Method | Request         | Response  | ResponseCodes | Description                  |
 | ---------------------- | ------ | --------------- | --------- | ------------- | ---------------------------- |
-| "/products"            | GET    | NONE            | Product[] | 200           | Get all products             |
+| "/products"            | GET    | NONE            | Product[] | 200, 404           | Get all products             |
 | "/products/{id}"       | GET    | int Id          | Product   | 200, 404      | Get product by id            |
 | "/products/{name}"     | GET    | string Name     | Product   | 200, 404      | Get product by name          |
 | "/products/{category}" | GET    | string Category | Product[] | 200, 404      | Get all products in category |

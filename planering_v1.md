@@ -52,7 +52,7 @@
 
 | Property Name | Data Type         | Description                        |
 | ------------- | ----------------- | ---------------------------------- |
-| Id            | int/Guid/ObjectId | Id for database                    |
+| Id            | int | Id for database                    |
 | Name          | string            | Name of product in database        |
 | Description   | string            | Description of product in database |
 | Price         | double            | Price of product                   |
@@ -65,7 +65,7 @@
 
 | Property Name      | Data Type         | Description                         |
 | ------------------ | ----------------- | ----------------------------------- |
-| Id                 | int/Guid/ObjectId | Id for database                     |
+| Id                 | int | Id for database                     |
 | Name               | string            | Name of productcategory in database |
 | ProductsInCategory | Product[]         | Products in product category        |
 
@@ -73,7 +73,7 @@
 
 | Property Name | Data Type         | Description      |
 | ------------- | ----------------- | ---------------- |
-| Id            | int/Guid/ObjectId | Id for database  |
+| Id            | int | Id for database  |
 | Email         | string [attr]     | Email of user    |
 | Password      | string?           | Password of user |
 
@@ -97,7 +97,7 @@
 
 | Property Name | Data Type         | Description                  |
 | ------------- | ----------------- | ---------------------------- |
-| Id            | int/Guid/ObjectId | Id for database              |
+| Id            | int | Id for database              |
 | Phone         | string [attr]     | Phone number of user         |
 | StreetAddress | string [attr]     | Street address of user       |
 | ZipCode       | string [attr]     | Zip code of user             |
@@ -108,8 +108,8 @@
 
 | Property Name   | Data Type         | Description                     |
 | --------------- | ----------------- | ------------------------------- |
-| Id              | int/Guid/ObjectId | Id for database                 |
-| CustomerId      | int/Guid/ObjectId | Id for customer that made order |
+| Id              | int | Id for database                 |
+| CustomerId      | int | Id for customer that made order |
 | ProductsInOrder | Product[]         | Products in order               |
 | DateTime        | DateTime          | Date and time of making order   |
 | Status          | string            | Status of order                 |

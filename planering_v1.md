@@ -114,4 +114,4 @@
 | ProductsInOrder | Product[]         | Products in order               |
 | OrderDate        | DateTime          | Date and time of making order   |
 | TotalPrice       | Double           | Total price of order             |
-| Status          | string            | Status of order                 |
+| Status          | bool            | Status of order                 |

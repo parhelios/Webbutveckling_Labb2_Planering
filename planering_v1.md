@@ -104,7 +104,7 @@
 | City          | string            | City of residence of user    |
 | Country       | string            | Country of residence of user |
 
-### Orders
+### Order
 
 | Property Name   | Data Type         | Description                     |
 | --------------- | ----------------- | ------------------------------- |

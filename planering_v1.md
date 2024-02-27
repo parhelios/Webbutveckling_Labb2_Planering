@@ -99,7 +99,7 @@
 | ------------- | ----------------- | ---------------------------- |
 | Id            | int | Id for database              |
 | Phone         | string [attr]     | Phone number of user         |
-| StreetAddress | string [attr]     | Street address of user       |
+| Address | string [attr]     | Street address of user       |
 | ZipCode       | string [attr]     | Zip code of user             |
 | City          | string            | City of residence of user    |
 | Country       | string            | Country of residence of user |

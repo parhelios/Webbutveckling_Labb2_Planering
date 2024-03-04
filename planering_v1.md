@@ -4,17 +4,17 @@
 
 ### Product Endpoints
 
-| Path                            | Method | Request         | Response  | ResponseCodes | Description                  |
-| ------------------------------- | ------ | --------------- | --------- | ------------- | ---------------------------- |
-| "/products"                     | GET    | NONE            | Product[] | 200, 404      | Get all products             |
-| "/products/{id}"                | GET    | int Id          | Product   | 200, 404      | Get product by id            |
-| "/products/name/{name}"         | GET    | string Name     | Product   | 200, 404      | Get product by name          |
-| "/products/category/{category}" | GET    | string Category | Product[] | 200, 404      | Get all products in category |
-| "/products"                     | POST   | Product         | NONE      | 200, 400      | Add new product              |
-| "/products/{id}"                | PATCH  | int Id, Product | NONE      | 200, 400      | Update product               |
-| "/products/{id}                 | DELETE | int Id          | NONE      | 200, 404      | Delete product               |
-|                                 |        |                 |           |               | Add amount to inventory      |
-|                                 |        |                 |           |               | Toggle status on product     |
+| Path                            | Method | Request            | Response  | ResponseCodes | Description                  | TODO |
+| ------------------------------- | ------ | ------------------ | --------- | ------------- | ---------------------------- | ---- |
+| "/products"                     | GET    | NONE               | Product[] | 200, 404      | Get all products             |      |
+| "/products/{id}"                | GET    | int Id             | Product   | 200, 404      | Get product by id            |      |
+| "/products/name/{name}"         | GET    | string Name        | Product   | 200, 404      | Get product by name          |      |
+| "/products/category/{category}" | GET    | string Category    | Product[] | 200, 404      | Get all products in category |      |
+| "/products"                     | POST   | Product            | NONE      | 200, 400      | Add new product              |      |
+| "/products/{id}"                | PATCH  | int Id, Product    | NONE      | 200, 400      | Update product               |      |
+| "/products/amount{id}"          | PATCH  | int Id, int Amount | NONE      |               | Add amount to inventory      | FIX  |
+| "/products/status{id}"          | PATCH  | NONE               | NONE      |               | Toggle status on product     | FIX  |
+| "/products/{id}                 | DELETE | int Id             | NONE      | 200, 404      | Delete product               |      |
 
 ### User Administration Endpoints
 

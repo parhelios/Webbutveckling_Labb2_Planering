@@ -125,3 +125,13 @@
 | OrderDate       | DateTime  | Date and time of making order   |
 | TotalPrice      | Double    | Total price of order            |
 | Status          | bool      | Status of order                 |
+
+### TODO: Endpoints som är trasiga/behöver fixas
+
+GetAllItemsFromCustomerCart
+AddProductToCustomerCart
+RemoveProductFromCustomerCart
+
+GetAllCustomers - visar inte contactinfo och cart
+GetAllProducts - visar inte category
+UpdateProduct - går inte att uppdatera category / visas inte åtminstone

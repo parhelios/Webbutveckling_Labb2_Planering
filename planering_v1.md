@@ -71,6 +71,14 @@
 | Name               | string    | Name of productcategory in database |
 | ProductsInCategory | Product[] | Products in product category        |
 
+### ProductOrders
+
+| Property Name | Data Type | Description                    |
+| ------------- | --------- | ------------------------------ |
+| ProductId     | int       | FK to Product.Id               |
+| OrderId       | int       | FK to Order.Id                 |
+| Amount        | int       | Amount of set product in order |
+
 ### User
 
 | Property Name | Data Type     | Description      |

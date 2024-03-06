@@ -128,10 +128,7 @@
 
 ### TODO: Endpoints som är trasiga/behöver fixas
 
+*(Avvakta till frontend är påbörjat)*
 GetAllItemsFromCustomerCart
 AddProductToCustomerCart
 RemoveProductFromCustomerCart
-
-GetAllCustomers - visar inte contactinfo och cart
-GetAllProducts - visar inte category
-UpdateProduct - går inte att uppdatera category / visas inte åtminstone

@@ -52,16 +52,17 @@
 
 ### Product
 
-| Property Name | Data Type         | Description                        |
-| ------------- | ----------------- | ---------------------------------- |
-| Id            | int               | Id for database                    |
-| Name          | string            | Name of product in database        |
-| Description   | string            | Description of product in database |
-| Price         | double            | Price of product                   |
-| Category      | ProductCategory[] | Categories of product              |
-| Status        | bool              | Status of product in database      |
-| ImageURL      | string [attr]     | Image source for product           |
-| Stock         | int               | Amount of product in database      |
+| Property Name | Data Type                  | Description                        |
+| ------------- | -------------------------- | ---------------------------------- |
+| Id            | int                        | Id for database                    |
+| Name          | string                     | Name of product in database        |
+| Description   | string                     | Description of product in database |
+| Price         | double                     | Price of product                   |
+| Category      | ProductCategory[]          | Categories of product              |
+| Status        | bool                       | Status of product in database      |
+| ImageURL      | string [attr]              | Image source for product           |
+| Stock         | int                        | Amount of product in database      |
+| Orders        | ICollection<ProductOrders> | Many-to-many list                  |
 
 ### ProductCategory
 
@@ -71,13 +72,16 @@
 | Name               | string    | Name of productcategory in database |
 | ProductsInCategory | Product[] | Products in product category        |
 
-### ProductOrders
+### ProductsOrders
 
-| Property Name | Data Type | Description                    |
-| ------------- | --------- | ------------------------------ |
-| ProductId     | int       | FK to Product.Id               |
-| OrderId       | int       | FK to Order.Id                 |
-| Amount        | int       | Amount of set product in order |
+| Property Name | Data Type | Description                            |
+| ------------- | --------- | -------------------------------------- |
+| Id            | int       | Id for database                        |
+| ProductId     | int       | FK to Product.Id                       |
+| Product       | Product   | Product in product order               |
+| OrderId       | int       | FK to Order.Id                         |
+| Order         | Order     | Order in product order                 |
+| Amount        | int       | Amount of set product in product order |
 
 ### User
 
@@ -117,18 +121,19 @@
 
 ### Order
 
-| Property Name   | Data Type | Description                     |
-| --------------- | --------- | ------------------------------- |
-| Id              | int       | Id for database                 |
-| CustomerId      | int       | Id for customer that made order |
-| ProductsInOrder | Product[] | Products in order               |
-| OrderDate       | DateTime  | Date and time of making order   |
-| TotalPrice      | Double    | Total price of order            |
-| Status          | bool      | Status of order                 |
+| Property Name   | Data Type                  | Description                     |
+| --------------- | -------------------------- | ------------------------------- |
+| Id              | int                        | Id for database                 |
+| CustomerId      | int                        | Id for customer that made order |
+| ProductsInOrder | Product[]                  | Products in order               |
+| OrderDate       | DateTime                   | Date and time of making order   |
+| TotalPrice      | Double                     | Total price of order            |
+| Status          | bool                       | Status of order                 |
+| Products        | ICollection<ProductOrders> | Many-to-many list               |
 
 ### TODO: Endpoints som är trasiga/behöver fixas
 
-*(Avvakta till frontend är påbörjat)*
+_(Avvakta till frontend är påbörjat)_
 GetAllItemsFromCustomerCart
 AddProductToCustomerCart
 RemoveProductFromCustomerCart

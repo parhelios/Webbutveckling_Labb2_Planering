@@ -23,8 +23,8 @@
 | "/users/customers" | GET    | NONE         | Customer[] | 200           | Get all customers |
 | "/users/admins"    | GET    | NONE         | Admin[]    | 200           | Get all admins    |
 | "/users/{userId}"  | GET    | int userId   | Customer   | 200, 404      | Get user by id    |
-| "/users/{userId}"  | GET    | int userId   | Admin   | 200, 404      | Get admin by id    |
 | "/users/{email}"   | GET    | string Email | Customer   | 200, 404      | Get user by email |
+| "/users/admins/{email}"   | GET    | string Email | Admin   | 200, 404      | Get admin by email |
 | "/users/customers" | POST   | User         | NONE       | 200, 400      | Add new customer  |
 | "/users/admins"    | POST   | User         | NONE       | 200, 400      | Add new admin     |
 | "/users/{userId}"  | DELETE | int userId   | NONE       | 200, 404      | Delete customer   |

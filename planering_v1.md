@@ -18,16 +18,14 @@
 
 ### User Administration Endpoints
 
-| Path                    | Method | Request      | Response   | ResponseCodes | Description        |
-| ----------------------- | ------ | ------------ | ---------- | ------------- | ------------------ |
-| "/users/customers"      | GET    | NONE         | Customer[] | 200           | Get all customers  |
-| "/users/admins"         | GET    | NONE         | Admin[]    | 200           | Get all admins     |
-| "/users/{userId}"       | GET    | int userId   | Customer   | 200, 404      | Get user by id     |
-| "/users/{email}"        | GET    | string Email | Customer   | 200, 404      | Get user by email  |
-| "/users/admins/{email}" | GET    | string Email | Admin      | 200, 404      | Get admin by email |
-| "/users/customers"      | POST   | User         | NONE       | 200, 400      | Add new customer   |
-| "/users/admins"         | POST   | User         | NONE       | 200, 400      | Add new admin      |
-| "/users/{userId}"       | DELETE | int userId   | NONE       | 200, 404      | Delete customer    |
+| Path              | Method | Request      | Response | ResponseCodes | Description       |
+| ----------------- | ------ | ------------ | -------- | ------------- | ----------------- |
+| "/users/"         | GET    | NONE         | User[]   | 200           | Get all users     |
+| "/users/{userId}" | GET    | int userId   | User     | 200, 404      | Get user by id    |
+| "/users/{email}"  | GET    | string Email | User     | 200, 404      | Get user by email |
+| "/users/{role}"   | GET    | string Role  | User     | 200, 404      | Get user by role  |
+| "/users/"         | POST   | User         | NONE     | 200, 400      | Add new user      |
+| "/users/{userId}" | DELETE | int userId   | NONE     | 200, 404      | Delete user       |
 
 ### ProductCategory Endpoints
 
@@ -39,15 +37,12 @@
 
 ### Customer Interaction Endpoints
 
-| Path                                  | Method | Request                        | Response  | ResponseCodes | Description                           |
-| ------------------------------------- | ------ | ------------------------------ | --------- | ------------- | ------------------------------------- |
-| "/customer/{userId}"                  | GET    | int userId                     | Product[] | 200, 400      | Get all items from customer cart      |
-| "/customer/{userId}"                  | POST   | int userId                     | Order     | 200, 400      | Create a customer order               |
-| "/customer/{userId}"                  | PATCH  | int userId, ContactInfo        | NONE      | 200, 404      | Update customer info                  |
-| "/customer/password/{userId}"         | PATCH  | int userId, string newPassword | NONE      | 200, 404      | Update customer password              |
-| "/customer/cart/{userId}"             | PATCH  | int userId                     | NONE      | 200, 404      | Clear all products from customer cart |
-| "/customer/cart/{userId}/{productId}" | PUT    | int userId, int productId      | NONE      | 200, 404      | Add product to customer cart          |
-| "/customer/cart/{userId}/{productId}" | DELETE | int userId, int productId      | NONE      | 200, 404      | Remove product from customer cart     |
+| Path                          | Method | Request                        | Response  | ResponseCodes | Description                  |
+| ----------------------------- | ------ | ------------------------------ | --------- | ------------- | ---------------------------- |
+| "/customer/{userId}"          | GET    | int userId                     | Product[] | 200, 400      | Get all items from user cart |
+| "/customer/{userId}"          | POST   | int userId                     | Order     | 200, 400      | Create a user order          |
+| "/customer/{userId}"          | PATCH  | int userId, ContactInfo        | NONE      | 200, 404      | Update user info             |
+| "/customer/password/{userId}" | PATCH  | int userId, string newPassword | NONE      | 200, 404      | Update user password         |
 
 ## Data
 

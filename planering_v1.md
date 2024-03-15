@@ -18,16 +18,16 @@
 
 ### User Administration Endpoints
 
-| Path               | Method | Request      | Response   | ResponseCodes | Description       |
-| ------------------ | ------ | ------------ | ---------- | ------------- | ----------------- |
-| "/users/customers" | GET    | NONE         | Customer[] | 200           | Get all customers |
-| "/users/admins"    | GET    | NONE         | Admin[]    | 200           | Get all admins    |
-| "/users/{userId}"  | GET    | int userId   | Customer   | 200, 404      | Get user by id    |
-| "/users/{email}"   | GET    | string Email | Customer   | 200, 404      | Get user by email |
-| "/users/admins/{email}"   | GET    | string Email | Admin   | 200, 404      | Get admin by email |
-| "/users/customers" | POST   | User         | NONE       | 200, 400      | Add new customer  |
-| "/users/admins"    | POST   | User         | NONE       | 200, 400      | Add new admin     |
-| "/users/{userId}"  | DELETE | int userId   | NONE       | 200, 404      | Delete customer   |
+| Path                    | Method | Request      | Response   | ResponseCodes | Description        |
+| ----------------------- | ------ | ------------ | ---------- | ------------- | ------------------ |
+| "/users/customers"      | GET    | NONE         | Customer[] | 200           | Get all customers  |
+| "/users/admins"         | GET    | NONE         | Admin[]    | 200           | Get all admins     |
+| "/users/{userId}"       | GET    | int userId   | Customer   | 200, 404      | Get user by id     |
+| "/users/{email}"        | GET    | string Email | Customer   | 200, 404      | Get user by email  |
+| "/users/admins/{email}" | GET    | string Email | Admin      | 200, 404      | Get admin by email |
+| "/users/customers"      | POST   | User         | NONE       | 200, 400      | Add new customer   |
+| "/users/admins"         | POST   | User         | NONE       | 200, 400      | Add new admin      |
+| "/users/{userId}"       | DELETE | int userId   | NONE       | 200, 404      | Delete customer    |
 
 ### ProductCategory Endpoints
 
@@ -86,27 +86,16 @@
 
 ### User
 
-| Property Name | Data Type     | Description      |
-| ------------- | ------------- | ---------------- |
-| Id            | int           | Id for database  |
-| Email         | string [attr] | Email of user    |
-| Password      | string?       | Password of user |
-
-### Customer : User
-
-| Property Name | Data Type   | Description                       |
-| ------------- | ----------- | --------------------------------- |
-| FirstName     | string      | First name of user in database    |
-| LastName      | string      | Last name of user in database     |
-| ContactInfo   | ContactInfo | Address of user                   |
-| Orders        | Order[]     | List of orders made by user       |
-| Cart          | Product[]   | List of products in customer cart |
-
-### Admin : User
-
-| Property Name | Data Type | Description        |
-| ------------- | --------- | ------------------ |
-| UserName      | string    | Username for admin |
+| Property Name | Data Type     | Description                    |
+| ------------- | ------------- | ------------------------------ |
+| Id            | int           | Id for database                |
+| Email         | string [attr] | Email of user                  |
+| Password      | string?       | Password of user               |
+| FirstName     | string        | First name of user in database |
+| LastName      | string        | Last name of user in database  |
+| ContactInfo   | ContactInfo   | Address of user                |
+| Orders        | Order[]       | List of orders made by user    |
+| Role          | string        | Role of user                   |
 
 ### ContactInfo
 
@@ -114,8 +103,8 @@
 | ------------- | ------------- | ---------------------------- |
 | Id            | int           | Id for database              |
 | Phone         | string [attr] | Phone number of user         |
-| Address       | string [attr] | Street address of user       |
-| ZipCode       | string [attr] | Zip code of user             |
+| Address       | string        | Street address of user       |
+| ZipCode       | string        | Zip code of user             |
 | City          | string        | City of residence of user    |
 | Region        | string        | Region of residence of user  |
 | Country       | string        | Country of residence of user |

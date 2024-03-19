@@ -55,7 +55,7 @@
 | Name          | string                     | Name of product in database        |
 | Description   | string                     | Description of product in database |
 | Price         | double                     | Price of product                   |
-| Category      | ProductCategory[]          | Categories of product              |
+| Category      | int                        | Categories of product              |
 | Status        | bool                       | Status of product in database      |
 | ImageURL      | string [attr]              | Image source for product           |
 | Stock         | int                        | Amount of product in database      |

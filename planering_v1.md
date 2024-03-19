@@ -32,6 +32,7 @@
 | Path             | Method | Request         | Response          | ResponseCodes | Description        |
 | ---------------- | ------ | --------------- | ----------------- | ------------- | ------------------ |
 | "/category"      | GET    | NONE            | ProductCategory[] | 200           | Get all categories |
+| "/category/{id}"      | GET    | int Id            | ProductCategory | 200           | Get category by id |
 | "/category"      | POST   | ProductCategory | NONE              | 200, 400      | Add new category   |
 | "/category/{id}" | DELETE | int Id          | NONE              | 200, 404      | Delete category    |
 

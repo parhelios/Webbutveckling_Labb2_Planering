@@ -116,10 +116,3 @@
 | TotalPrice      | Double                     | Total price of order            |
 | Status          | bool                       | Status of order                 |
 | Products        | ICollection<ProductOrders> | Many-to-many list               |
-
-### TODO: Endpoints som är trasiga/behöver fixas
-
-_(Avvakta till frontend är påbörjat)_
-GetAllItemsFromCustomerCart
-AddProductToCustomerCart
-RemoveProductFromCustomerCart

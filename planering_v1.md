@@ -40,7 +40,7 @@
 
 | Path                          | Method | Request                        | Response  | ResponseCodes | Description                  |
 | ----------------------------- | ------ | ------------------------------ | --------- | ------------- | ---------------------------- |
-| "/customer/{userId}"          | GET    | int userId                     | Product[] | 200, 400      | Get all items from user cart |
+| "/customer/orders"            | GET    | NONE                            | Order[] | 200           | Get all orders                |
 | "/customer/{userId}"          | POST   | int userId, Dictionary cart    | Order     | 200, 400      | Create a user order          |
 | "/customer/{userId}"          | PATCH  | int userId, ContactInfo        | NONE      | 200, 404      | Update user info             |
 | "/customer/password/{userId}" | PATCH  | int userId, string newPassword | NONE      | 200, 404      | Update user password         |
